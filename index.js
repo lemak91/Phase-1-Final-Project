@@ -14,3 +14,11 @@ function addBeer(beerObj) {
   beersContainer.append(listItem);
   // console.log(listItem)
 }
+
+button.addEventListener("click", () => {
+  const ticksRemaining = document.getElementById("ticket-num").textContent;
+  const newTicksRemaining = ticksRemaining - 1;
+  document.getElementById("ticket-num").textContent = newTicksRemaining;
+
+  button.disabled = newTicksRemaining === 0;
+});
