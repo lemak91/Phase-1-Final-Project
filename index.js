@@ -22,3 +22,36 @@ button.addEventListener("click", () => {
 
   button.disabled = newTicksRemaining === 0;
 });
+
+   let beerContainer = document.querySelector("ul");
+    beerContainer.addEventListener("click", (event) => {
+      const id = event.target.id;
+
+      if (id) {
+        setData(beerArray[id - 1]);
+        button.disabled = false;
+      }
+    });
+
+// function addBeer(beerObj) {
+//   // console.log(beerObj)
+//   let listItem = document.createElement("li");
+//   listItem.textContent = beerObj.title;
+//   listItem.id = beerObj.id;
+//   let beerContainer = document.querySelector("ul");
+//   beerContainer.append(listItem);
+//   // console.log(listItem)
+// }
+
+function setData(element) {
+  console.log(element);
+  document.getElementById("image_url").src = element.image_url;
+  document.getElementById("name").textContent = element.name;
+  document.getElementById("beer-info").textContent = element.beer-info;
+  document.getElementById("description").textContent = element.description;
+}
+
+
+
+
+

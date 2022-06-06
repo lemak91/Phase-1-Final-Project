@@ -15,7 +15,7 @@
 <div class="heading">
     <div class="item">
         <h2 class="ui header">
-            <i class="orange beer icon"></i>
+            <i class="green beer icon"></i>
             <div class="content">BEER</div>
         </h2>
     </div>
@@ -28,30 +28,34 @@
             <!-- side menu -->
             <ul class="ui divided list" id="beers">
                 <li class="beer">Beer types</li>
-                
+
             </ul>
         </div>
     </div>
 
     <!-- beer image -->
     <div class="four wide column">
-        <img id="poster" src="assets/placeholderImage.png" alt="[BEER]" />
+        <img 
+            id="image_url" 
+            src="assets/placeholderImage.png" 
+            alt="[BEER]" 
+        />
     </div>
 
     <!-- showing info -->
     <div class="four wide column">
-        <div class="ui cards" id="showing">
+        <div class="ui cards" id="name">
             <div class="card">
-                <div id="title" class="title">[BEER TITLE]</div>
+                <div id="name" class="name">[BEER TITLE]</div>
                 <div class="content">
                     <div class="description">
-                        <div id="beer-info">[INSERT BEER DESCRIPTION HERE]</div>
-                        <span id="showtime" class="ui label">[SHOWTIME]</span>
+                        <div id="description">[INSERT BEER DESCRIPTION HERE]</div>
+                        <span id="showtime" class="ui label">[BEER TYPE]</span>
                     </div>
                 </div>
                 <div class="extra content">
-                    <button id="buy-ticket" class="ui orange button">
-                        Buy Ticket
+                    <button id="buy-ticket" class="ui green button">
+                        BEER
                     </button>
                 </div>
             </div>
