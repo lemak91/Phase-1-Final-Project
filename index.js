@@ -32,6 +32,12 @@ function fetchPage() {
       let beerContainer = document.querySelector("ul");
       beerContainer.replaceChildren();
       beersArray.forEach(addBeer);
+      beerContainer.addEventListener("click", (event) => {
+        const id = event.target.id;
+        if (id) {
+          setData(beersArray[id - 1]);
+        }
+      });
     });
 }
 
