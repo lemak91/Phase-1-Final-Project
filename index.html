@@ -1,88 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Final Project</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"
+    />
     <link rel="stylesheet" href="index.css" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final Project</title>
-</head>
-<body>
-
-<!-- navbar -->
-<div class="heading">
-    <div class="item">
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="heading">
+      <div class="item">
         <h2 class="ui header">
-            <i class="blue beer icon"></i>
-            <div class="content">BEER</div>
+          <i class="blue beer icon"></i>
+          <div class="content">BEER</div>
         </h2>
+      </div>
     </div>
-</div>
 
-
-<div class="ui centered grid">
-    <div class="four wide column">
+    <div class="ui centered grid">
+      <div class="four wide column">
         <div class="list-container">
-            <!-- side menu -->
-            <div></div>
-            <div class="myBox">
-                <div class="beer">Beer types</div>
-            <ul class="ui divided list" id="beers">
-            </ul>
-            </div>
+          <!-- side menu -->
+          <div></div>
+          <div class="myBox">
+            <div class="beer">Beer types</div>
+            <ul class="ui divided list" id="beers"></ul>
+          </div>
         </div>
-                <div id="back" class="ui animated button disabled" tabindex="0">
-                    <div class="visible content">Back</div>
-                    <div class="hidden content">
-                        <i class="left arrow icon"></i>
-                    </div>
-                </div>
+        <div id="back" class="ui animated button disabled" tabindex="0">
+          <div class="visible content">Back</div>
+          <div class="hidden content">
+            <i class="left arrow icon"></i>
+          </div>
+        </div>
         <div id="next" class="ui animated button" tabindex="0">
-            <div class="visible content">Next</div>
-            <div class="hidden content">
-                <i class="right arrow icon"></i>
-            </div>
+          <div class="visible content">Next</div>
+          <div class="hidden content">
+            <i class="right arrow icon"></i>
+          </div>
         </div>
-    </div>
-    
+      </div>
 
-    <!-- beer image -->
-    <div class="four wide column">
-        <img 
-            id="image_url" 
-            alt="[BEER]" 
-            style="height: 550px; width: 300px;"
-        />
-    </div>
+      <!-- beer image -->
+      <div class="four wide column">
+        <img id="image_url" alt="[BEER]" style="height: 550px; width: 300px" />
+      </div>
 
-    <!-- beer info -->
-    <div class="four wide column">
+      <!-- beer info -->
+      <div class="four wide column">
         <div class="myBox">
-        <div class="ui cards">
+          <div class="ui cards">
             <div class="card">
-                <div id="name" class="name" style="font-size: 26px;">[BEER TITLE]</div>
-                <div id="tagline" class="name"> [TAGLINE] </div>
-                <div class="content">
-                    <div class="description">
-                        <div id="description"> [INSERT BEER DESCRIPTION HERE]</div>
-                        <span id="abv" class="ui label"></span>
-                        <span id="firstbrewed" class="ui label"></span>
-                        <span id="foodpairing" class="ui label"></span>
-                        <!-- <span id="ingredients" class="ui label"></span> -->
-                    </div>
+              <div id="name" class="name" style="font-size: 26px">
+                [BEER TITLE]
+              </div>
+              <div id="tagline" class="name">[TAGLINE]</div>
+              <div class="content">
+                <div class="description">
+                  <div id="description">[INSERT BEER DESCRIPTION HERE]</div>
+                  <span id="abv" class="ui label"></span>
+                  <span id="firstbrewed" class="ui label"></span>
+                  <span id="foodpairing" class="ui label"></span>
+                  <!-- <span id="ingredients" class="ui label"></span> -->
                 </div>
-                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<script src="index.js"></script>
-</body>
-
-</html>
-
-
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
