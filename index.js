@@ -37,30 +37,37 @@ function addBeer(beerObj) {
 }
 
 function fetchPage() {
-  console.log(pageNumber)
+    fetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}`)
+      .then((response) => response.json())
+      .then((beersArray) => {
+        let beerContainer = document.querySelector("ul");
+        beerContainer.replaceChildren();
+        beersArray.forEach(addBeer);
+      });
 }
 
 let pageNumber = 1;
 let nextButton = document.getElementById("next")
+let backButton = document.getElementById("back");
+
+
 nextButton.addEventListener("click", (event) => {
   pageNumber++;
-  // fetchPage();
-  console.log(`https://api.punkapi.com/v2/beers?page=${pageNumber}`)
+  fetchPage();
+  backButton.classList.remove("disabled")
+  if (pageNumber === 13) {
+    nextButton.classList.add("disabled")
+  }
 
-  fetch(`https://api.punkapi.com/v2/beers?page=${pageNumber}`)
-    .then((response) => response.json())
-    .then((beersArray) => {
-      console.log(beersArray);
-      let beerContainer = document.querySelector("ul");
-      beerContainer.replaceChildren();
-      beersArray.forEach(addBeer);
-    });
 })
 
-let backButton = document.getElementById("back");
 backButton.addEventListener("click", (event) => {
   pageNumber--;
   fetchPage();
+  nextButton.classList.remove("disabled");
+  if (pageNumber === 1) {
+    backButton.classList.add("disabled")
+  }
 });
 
 
