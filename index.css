@@ -69,3 +69,8 @@ body {
 #next {
     margin-left: 30px;
 }
+
+#image_url {
+    height: 570px;
+    margin-top: 40px;
+}
