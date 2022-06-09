@@ -65,3 +65,7 @@ body {
 .list-container {
     padding-bottom: 20px;
 }
+
+#next {
+    margin-left: 30px;
+}
