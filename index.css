@@ -8,28 +8,6 @@ body {
   padding: 5px 0px 5px 15px;
 }
 
-.title {
-  background-color: #333333;
-  padding: 5px;
-  color: white;
-}
-
-#runtime {
-  background-color: #333333;
-  color: #3e8fde;
-  padding: 0px 0px 5px 5px;
-}
-
-
-#subtitle {
-  color: white;
-  margin-left: 55px;
-}
-
-#showing {
-  margin-left: 20px;
-}
-
 #beers li::before {
   content: "";
 }
@@ -43,10 +21,6 @@ img {
   max-width: 25vw;
 }
 
-#film-info {
-  padding-bottom: 15px;
-}
-
 body {
   margin-bottom: 200%;
 }
@@ -56,26 +30,31 @@ body {
   padding: 5px;
   width: 200px;
   height: 550px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .list-container {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 #next {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 #image_url {
-    height: 570px;
-    margin-top: 40px;
+  height: 570px;
+  margin-top: 40px;
 }
 
 .ui.label {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .header-text {
-    color: #3e8fde;
+  color: #3e8fde;
+}
+
+.ui.grid {
+  margin: 0;
 }
