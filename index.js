@@ -10,16 +10,16 @@ fetch("https://api.punkapi.com/v2/beers")
     beerContainer.addEventListener("click", (event) => {
       const id = event.target.id;
       if (id) {
-        setData(beersArray[id - 1]);
+        setData(beersArray[id]);
       }
     });
   });
 
-function addBeer(beerObj) {
+function addBeer(beerObj, i) {
   // console.log(beerObj)
   let listItem = document.createElement("li");
   listItem.textContent = beerObj.name;
-  listItem.id = beerObj.id;
+  listItem.id = i;
   let beerContainer = document.querySelector("ul");
   beerContainer.append(listItem);
   // console.log(listItem)
@@ -35,7 +35,7 @@ function fetchPage() {
       beerContainer.addEventListener("click", (event) => {
         const id = event.target.id;
         if (id) {
-          setData(beersArray[id - 1]);
+          setData(beersArray[id]);
         }
       });
     });
