@@ -69,7 +69,8 @@ backButton.addEventListener("click", (event) => {
 
 function setData(element) {
   console.log(element);
-  document.getElementById("image_url").src = element.image_url;
+  document.getElementById("image_url").src =
+    element.image_url || "https://images.punkapi.com/v2/keg.png";
   document.getElementById("name").textContent = element.name;
   // document.getElementById("beer-info").textContent = element.beer - info;
   document.getElementById("description").textContent = element.description;
