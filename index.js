@@ -4,23 +4,21 @@ let beers;
 fetch("https://api.punkapi.com/v2/beers")
   .then((response) => response.json())
   .then((beersArray) => {
-    beersArray.forEach(addBeer);
-    setData(beersArray[0]);
+    beersArray.forEach(createAndAppendBeerLi);
+    setImageAndDescription(beersArray[0]);
     beers = beersArray;
   });
 
-
-
 beerContainer.addEventListener("click", (event) => {
-  const id = event.target.id;
-    setData(beers[id]);
+  const index = event.target.id;
+  setImageAndDescription(beers[index]);
 });
 
-function addBeer(beerObj, i) {
+function createAndAppendBeerLi(beerObj, index) {
   let listItem = document.createElement("li");
   listItem.textContent = beerObj.name;
-  listItem.id = i
-  beerContainer.append(listItem); 
+  listItem.id = index;
+  beerContainer.append(listItem);
 }
 
 function fetchPage() {
@@ -28,11 +26,10 @@ function fetchPage() {
     .then((response) => response.json())
     .then((beersArray) => {
       beerContainer.replaceChildren();
-      beersArray.forEach(addBeer);
-      beers = beersArray
+      beersArray.forEach(createAndAppendBeerLi);
+      beers = beersArray;
     });
 }
-
 let pageNumber = 1;
 let nextButton = document.getElementById("next");
 let backButton = document.getElementById("back");
@@ -55,7 +52,7 @@ backButton.addEventListener("click", (event) => {
   }
 });
 
-function setData(element) {
+function setImageAndDescription(element) {
   document.getElementById("image_url").src =
     element.image_url || "https://images.punkapi.com/v2/keg.png";
   document.getElementById("name").textContent = element.name;
