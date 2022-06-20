@@ -8,6 +8,10 @@ body {
   padding: 5px 0px 5px 15px;
 }
 
+.header-text {
+  color: #3e8fde;
+}
+
 #beers li::before {
   content: "";
 }
@@ -21,9 +25,6 @@ img {
   max-width: 25vw;
 }
 
-body {
-  margin-bottom: 200%;
-}
 
 .myBox {
   border: none;
@@ -51,10 +52,7 @@ body {
   margin: 5px 0;
 }
 
-.header-text {
-  color: #3e8fde;
-}
-
+/* https://github.com/Semantic-Org/Semantic-UI/issues/127 */
 .ui.grid {
   margin: 0;
 }
