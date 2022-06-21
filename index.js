@@ -30,6 +30,7 @@ function fetchPage() {
       beers = beersArray;
     });
 }
+
 let pageNumber = 1;
 let nextButton = document.getElementById("next");
 let backButton = document.getElementById("back");
