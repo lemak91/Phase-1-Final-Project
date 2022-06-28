@@ -39,8 +39,26 @@ let pageNumber = 1;
 let nextButton = document.getElementById("next");
 let backButton = document.getElementById("back");
 
+//highlights all the li's blue
+beerContainer.addEventListener("mouseenter", (event) => {
+  event.target.style.color = "blue";
+
+  setTimeout(() => {
+    event.target.style.color = "";
+  }, 500);
+});
+
+//highlights the li's orange when cursor is over
+beerContainer.addEventListener("mouseover", (event) => {
+  event.target.style.color = "orange";
+
+  setTimeout(() => {
+    event.target.style.color = "";
+  }, 500);
+});
+
 //next button Event Listener
-nextButton.addEventListener("click", (event) => {
+nextButton.addEventListener("click", () => {
   pageNumber++;
   fetchPage();
   backButton.classList.remove("disabled");
@@ -49,34 +67,8 @@ nextButton.addEventListener("click", (event) => {
   }
 });
 
-let test = document.getElementById("beers");
-
-test.addEventListener(
-  "mouseenter",
-  function (event) {
-    event.target.style.color = "blue";
-
-    setTimeout(function () {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false
-);
-
-test.addEventListener(
-  "mouseover",
-  function (event) {
-    event.target.style.color = "orange";
-
-    setTimeout(function () {
-      event.target.style.color = "";
-    }, 500);
-  },
-  false
-);
-
 //back button event Listener
-backButton.addEventListener("click", (event) => {
+backButton.addEventListener("click", () => {
   pageNumber--;
   fetchPage();
   nextButton.classList.remove("disabled");
