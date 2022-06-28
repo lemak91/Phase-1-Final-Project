@@ -38,6 +38,7 @@ function fetchPage() {
 let pageNumber = 1;
 let nextButton = document.getElementById("next");
 let backButton = document.getElementById("back");
+let img = document.querySelector("img");
 
 //highlights all the li's blue
 beerContainer.addEventListener("mouseenter", (event) => {
@@ -75,6 +76,16 @@ backButton.addEventListener("click", () => {
   if (pageNumber === 1) {
     backButton.classList.add("disabled");
   }
+});
+
+//tilt & enlarge image when cursor is over
+img.addEventListener("mouseenter", () => {
+  img.classList.add("entered");
+});
+
+//remove tilt & enlarge image when cursor leaves
+img.addEventListener("mouseleave", () => {
+  img.classList.remove("entered");
 });
 
 //image and description elements
